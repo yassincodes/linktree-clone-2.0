@@ -1,0 +1,60 @@
+// things I don't understand in linktree
+// the layout will break down at width 800px
+// they are pretty slow
+
+// how I made the linktree clone in just one day!
+// I had this code, that I use for setting up authentication
+// and linktree each authenticating user to firebase database
+// what ealse you need?
+// you'll just code the admin page
+// and whenever a user changes something there
+// you'll store it on firebase
+// each use has his own array of data
+// this array is organised by number
+// number 0 => contains the basic info that I get from google auth
+// number 1 => contains his customisation of the page
+// number 2 to infinity => contains the links of the user and their properties
+
+// try as hard as you can so that you can send an invite to sabra
+
+// yakha na bach marbout ? ijam3a bach rabtitni ? ichhada kifah na marbout biha ?
+// najm min 8odwa b9arar bark nasb7 fi dubai
+
+// to fix
+// if a user changes things in localStorage
+// if there is no link, the background will be cutted
+// if localStorage contains or things like that it won't work
+
+// change the name of the copied className to an other name of your own
+
+import { Button } from "@chakra-ui/react";
+import { useContext } from "react";
+import { authContext } from "./contexts/authContext";
+import { Link } from "react-router-dom";
+import { dataContext } from "./contexts/dataContext";
+
+function Home() {
+  const { signInWithGoogle } = useContext(authContext);
+  const { appData } = useContext(dataContext);
+
+  // when a user clicks on continue to admin
+  // there will be a function that will
+  appData && console.log(appData[0].uid);
+  return (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      {appData && appData[0].uid ? (
+        <Link to="/admin">
+            <Button>continue to admin</Button>
+        </Link>
+      ) : (
+        <Link to="/admin">
+          <Button colorScheme="blue" onClick={signInWithGoogle}>
+            Log in with google
+          </Button>
+        </Link>
+      )}
+    </div>
+  );
+}
+
+export default Home;
