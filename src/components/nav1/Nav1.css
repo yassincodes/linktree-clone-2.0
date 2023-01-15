@@ -1,0 +1,39 @@
+.Nav1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Nav1 .logo {
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nav1 .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.Nav1 .avatar img {
+    height: 7vh;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    .Nav1 {
+        flex-direction: row;
+    }
+    .Nav1 .logo {
+        height: auto;
+        margin-left: 4px;
+    }
+    .Nav1 .avatar {
+        margin-right: 22px;
+        margin-bottom: 0;
+    }
+}

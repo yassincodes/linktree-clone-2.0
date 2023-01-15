@@ -1,13 +1,15 @@
-import { useState, useContext } from "react";
+import { useState, useContext } from "react"
 import firebase from "../../firebase/firebase";
 import { dataContext } from "../../contexts/dataContext";
 
+
 function ChooseUsername() {
+
   const { dataCenter, usernames, theUsernames } = useContext(dataContext);
 
   // declaring the username state and creating it
   const [theUsername, setTheUsername] = useState("");
-
+  
   function createAUsername() {
     console.log(
       usernames && dataCenter && theUsername.match("^[A-Za-z0-9_]+$")
@@ -23,6 +25,7 @@ function ChooseUsername() {
       dataCenter &&
       theUsername.match("^[A-Za-z0-9_]+$")
     ) {
+
       firebase
         .database()
         .ref(localStorage.getItem("this_uid") + "/" + "user_info_section_2")
@@ -51,26 +54,26 @@ function ChooseUsername() {
     }
   }
 
-  return (
-    <div className="username_page">
-      <div>come rate me log on the top left</div>
-      <div>we are almost done, just choose a username :)</div>
-      <div>
-        <input
-          type="text"
-          onChange={(e) => setTheUsername(e.target.value)}
-          placeholder="your username"
-          value={theUsername}
-        />
-        <button onClick={createAUsername}>create my account</button>
+    return (
+        <div className="username_page">
+          <div>come rate me log on the top left</div>
+          <div>we are almost done, just choose a username :)</div>
+          <div>
+            <input
+              type="text"
+              onChange={(e) => setTheUsername(e.target.value)}
+              placeholder="your username"
+              value={theUsername}
+            />
+            <button onClick={createAUsername}>create my account</button>
+          </div>
+          <div>
+            note: you can find an amazing username with my other product UH.
+            UH will help you find an amazing username not only here but
+            in all your social media accounts
+          </div>
       </div>
-      <div>
-        note: you can find an amazing username with my other product UH. UH will
-        help you find an amazing username not only here but in all your social
-        media accounts
-      </div>
-    </div>
-  );
+    )
 }
 
-export default ChooseUsername;
+export default ChooseUsername

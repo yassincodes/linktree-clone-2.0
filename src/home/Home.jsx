@@ -10,7 +10,7 @@ function Home() {
 
   if (appData && appData[0].uid) {
     return <div>contine to admin</div>;
-  } else if (appData) {
+  } else {
     return (
       <div>
         <Link to="/admin">
@@ -18,8 +18,6 @@ function Home() {
         </Link>
       </div>
     );
-  } else {
-    return <div>loading</div>;
   }
 }
 

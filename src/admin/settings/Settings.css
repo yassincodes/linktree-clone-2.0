@@ -1,0 +1,99 @@
+.add_icon_main_section {
+    background: white;
+    border-radius: 6px;
+    border-color: white;
+    margin: 6px 1px;
+    padding: 15px 12px;
+}
+
+.add_icon_no_data_section {
+    background: white;
+    border-radius: 6px;
+    border-color: white;
+    margin: 6px 1px;
+    padding: 15px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add_icon_no_data_section_message {
+    text-align: center;
+}
+
+.add_icon_button {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    width: 100%;
+}
+
+.local_social_icons_container {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0.5px solid gainsboro;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.icon {
+    width: 10%;
+    margin-left: 11px;
+}
+
+.website {
+    width: 80%;
+    margin-left: -4px;
+}
+
+.arrow {
+    width: 10%;
+    height: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6px;
+}
+
+.add_to_linktree_container {
+    padding: "12px 24px 40px 14px";
+    display: flex;
+    flex-direction: column;
+}
+
+.add_to_linktree_message {
+    margin-bottom: 10px
+}
+
+.typing_message {
+    color: red;
+}
+
+.add_to_linktree_button {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.social_icon {
+    display: flex;
+    background: white;
+}
+
+.social_icon .icon {
+    width: 10%;
+}
+
+.social_icon .website {
+    width: 70%;
+}
+
+.social_icon .switch {
+    width: 10%;
+}
+
+.social_icon .delete {
+    width: 10%;
+}

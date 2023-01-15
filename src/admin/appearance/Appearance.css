@@ -1,0 +1,27 @@
+.section_container {
+    background: white;
+    border-radius: 6px;
+    border-color: white;
+    margin: 6px 1px;
+}
+
+.profile_image_settings_container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16px;
+    height: 130px;
+}
+
+.profile_image_settings_image {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_image_settings_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+}

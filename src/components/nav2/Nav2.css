@@ -1,0 +1,18 @@
+.Nav2 {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .Nav2 .navigatingLink {
+    margin-left: 25px;
+    color: rgb(103 107 95 / 1);
+    font-weight: 700;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .Nav2 {
+      font-size: 0.8em;
+  }
+  }
